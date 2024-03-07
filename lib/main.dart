@@ -51,8 +51,10 @@ class HomePage extends StatelessWidget {
                       children: [
                         Text(autoList[index].title,
                             style: const TextStyle(fontSize: 20)),
+                        Expanded(
+                            flex: 1, child:
                         Image.network(
-                            autoList[index].photoPath, fit: BoxFit.scaleDown),
+                            autoList[index].photoPath, fit: BoxFit.scaleDown)),
                         Text("Модель: ${autoList[index].model}",
                             style: const TextStyle(fontSize: 15)),
                         Text("Цена: ${autoList[index].cost}",
@@ -63,7 +65,8 @@ class HomePage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => AutoPage(index_car:index)),
                           );
-                        }, child: const Text("Подробнее"),
+                        }, child: const Text("Подробнее",
+                        style: TextStyle( color: Color.fromARGB(255, 0, 255, 200))),
                         ),
                       ],
                     ),
@@ -90,7 +93,7 @@ List<Auto> autoList = [
   Auto(3, "LADA", "Niva Legend",  "LADA Niva Legend", "от 900 000 ₽", "https://io.ilsa.ru/gallery/catalog/3/bf/88a0ca66ac152172d2e3e728b7199bf3.jpg"),
   Auto(4, "УАЗ", "Patriot", "УАЗ Patriot", "от 1 500 000 ₽", "https://bez-benzina36.ru/wp-content/uploads/2019/01/патриот-400-768x768.jpg"),
   Auto(5, "УАЗ", "Pickup", "УАЗ Pickup", "от 1 000 000 ₽", "https://allroader.ru/wp-content/uploads/2016/11/UAZ_Pickup_01.jpg"),
-  Auto(6, "УАЗ", "Профи", "УАЗ Профи", "от 1 300 000 ₽", "https://uaz-ekb.ru/public/cat/cars/134-2be0570c-7fdf-4d40-bb39-e4c9829e138d.jpg.jpg"),
+  Auto(6, "УАЗ", "Профи", "УАЗ Профи", "от 1 300 000 ₽", "https://uaz-ekb.ru/public/cat/cars/134-2be0570c-7fdf-4d40-bb39-e4c9829e138d.jpg"),
   Auto(7, "ГАЗ", "Volga Siber", "ГАЗ Volga Siber", "от 300 000 ₽", "https://mezamo.ru/images/газ-volga-siber-2008-2010-седан/gaz-volga-siber-2008-2010-sedan_5.jpg"),
   Auto(8, "ГАЗ", "Соболь", "ГАЗ Соболь", "от 1 600 000 ₽", "https://a.d-cd.net/4995376s-960.jpg"),
   Auto(9, "ГАЗ", "Газель NN", "ГАЗ Газель NN", "от 3 000 000 ₽", "https://ndpa.ru/upload/iblock/c1b/2uq70jghdo6nraic2htbivmdcw61up42.jpg"),

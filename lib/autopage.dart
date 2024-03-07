@@ -9,12 +9,13 @@ class AutoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-        appBar: AppBar(title: Center(
-          child: Text(
-            autoList[index_car].titleAndModel
+        appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 0, 255, 200),
+            title: Center(
+              child: Text(autoList[index_car].titleAndModel),
           ),
         )
-        )
+
     );
   }
 }
