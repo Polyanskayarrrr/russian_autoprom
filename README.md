@@ -1,6 +1,6 @@
-# 3ISP9-21 Nikolaev Kirill
+# 3ISP9-21 Polyanskaya Elizaveta
 ## Практическая работа №4
-![image](https://github.com/lifst4ke/russian_autoprom/assets/143878792/09695ee2-ef61-416e-abef-af9c5f8ca558)
-![image](https://github.com/lifst4ke/russian_autoprom/assets/143878792/2f6bd0c3-8a76-4aa7-ac82-940af0ea8085)
-
-
+![image](https://github.com/Polyanskayarrrr/russian_autoprom1/assets/145163194/b6af7e1c-f5f4-4d13-8f47-17beba245d54)
+![image](https://github.com/Polyanskayarrrr/russian_autoprom1/assets/145163194/3622e126-0b9b-49ea-90cc-08324391cd70)
+![image](https://github.com/Polyanskayarrrr/russian_autoprom1/assets/145163194/95def4f0-b38e-4c71-9607-3909e317e04e)
+![image](https://github.com/Polyanskayarrrr/russian_autoprom1/assets/145163194/1079ecfe-68c5-4927-abaa-24e7bbd5fca9)
