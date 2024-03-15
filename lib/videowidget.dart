@@ -11,8 +11,11 @@ class VideoWidget extends StatelessWidget {
   Widget build(BuildContext context){
     String? videoID;
     videoID = YoutubePlayerController.convertUrlToId(autoList[index_car].videoPath);
-    final _controller = YoutubePlayerController(params:  YoutubePlayerParams(mute: false, showControls: true, showFullscreenButton: true));
+    final _controller = YoutubePlayerController(params:  const YoutubePlayerParams(mute: false, showControls: true, showFullscreenButton: true));
     _controller.loadVideoById(videoId: videoID.toString());
-    return Container();
+    return Container(
+      child: YoutubePlayer(controller: _controller,
+      aspectRatio: 16/9),
+    );
   }
 }

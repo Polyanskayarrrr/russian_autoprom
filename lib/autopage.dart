@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:russian_autoprom/videowidget.dart';
 import 'main.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+
 
 class AutoPage extends StatelessWidget {
   const AutoPage({super.key, required this.index_car});
@@ -13,9 +14,10 @@ class AutoPage extends StatelessWidget {
     return Scaffold(
 
         appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 0, 255, 200),
+            backgroundColor: const Color.fromARGB(255, 0, 255, 200),
             title: Center(
-              child: Text(autoList[index_car].titleAndModel),
+              child: Text(autoList[index_car].titleAndModel,
+                  style: const TextStyle(fontSize: 30)),
           ),
         ),
             body: ListView(
@@ -32,11 +34,11 @@ class AutoPage extends StatelessWidget {
     ),
               Container(
                   child: Text("Цена: ${autoList[index_car].cost}",
-                      style: const TextStyle(fontSize: 25))
+                      style: const TextStyle(fontSize: 26))
               ),
               Container(
                   height: 50,
-                  child: Text('Описание:',
+                  child: const Text('Описание:',
                     textAlign: TextAlign.left,
                     style: TextStyle(fontSize: 26,
                         color: Colors.black),
@@ -47,7 +49,7 @@ class AutoPage extends StatelessWidget {
                 child: ListView(
                     children: [
                       Text(autoList[index_car].description,
-                          style:  TextStyle(fontSize: 22,
+                          style:  const TextStyle(fontSize: 20,
                               color: Colors.black)
                       ),
                     ]
@@ -56,15 +58,16 @@ class AutoPage extends StatelessWidget {
         Container(
             height: 50,
             alignment: Alignment.bottomLeft,
-            child: Text('Характеристики',
+            child: const Text('Характеристики:',
                 textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 26,
                     color: Colors.black)
             )
         ),
         Container(
-                  color: Color.fromARGB(255, 0, 255, 200),
+                  color: const Color.fromARGB(255, 0, 255, 200),
                   child: Table(
+                    border: TableBorder.all(width: 1, color: Colors.black),
                     defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                     children: [
                       TableRow(
@@ -72,7 +75,7 @@ class AutoPage extends StatelessWidget {
                           Text(
                             textAlign: TextAlign.left,
                               characteristicName[0],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 22,
                                 color: Colors.black
                               ),
@@ -80,7 +83,7 @@ class AutoPage extends StatelessWidget {
                           Text(
                             textAlign: TextAlign.center,
                               autoList[index_car].characteristics[0],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 22,
                                 color: Colors.black
                               ),
@@ -92,7 +95,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.left,
                               characteristicName[1],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -100,7 +103,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.center,
                               autoList[index_car].characteristics[1],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -112,7 +115,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.left,
                               characteristicName[2],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -120,7 +123,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.center,
                               autoList[index_car].characteristics[2],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -132,7 +135,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.left,
                               characteristicName[3],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -140,7 +143,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.center,
                               autoList[index_car].characteristics[3],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -152,7 +155,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.left,
                               characteristicName[4],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -160,7 +163,7 @@ class AutoPage extends StatelessWidget {
                             Text(
                               textAlign: TextAlign.center,
                               autoList[index_car].characteristics[4],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 22,
                                   color: Colors.black
                               ),
@@ -173,12 +176,13 @@ class AutoPage extends StatelessWidget {
          Container(
             height: 50,
             alignment: Alignment.bottomLeft,
-            child: Text('Видео-обзор:',
+            child: const Text('Видео-обзор:',
                 textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 26,
                     color: Colors.black)
             )
         ),
+              VideoWidget(index_car: index_car)
         ]
     )
     );
