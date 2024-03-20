@@ -182,7 +182,24 @@ class AutoPage extends StatelessWidget {
                     color: Colors.black)
             )
         ),
-              VideoWidget(index_car: index_car)
+              VideoWidget(index_car: index_car),
+              Column(
+                children: [
+                  ElevatedButton(onPressed: () {},
+                    child: const Text("Добавить в избранное",
+                      style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
+                          fontSize: 26)
+                  ),
+                                    ),
+                  ElevatedButton(onPressed: () {},
+                    child: const Text("Добавить в корзину",
+                        style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
+                            fontSize: 26)
+                    ),
+                  ),
+                ],
+
+              ),
         ]
     )
     );

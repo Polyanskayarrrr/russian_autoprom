@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:russian_autoprom/autopage.dart';
+import 'package:russian_autoprom/basket.dart';
+import 'package:russian_autoprom/favourite.dart';
+
 
 
 
@@ -31,10 +34,24 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar( title: const Center(child: Text("Российский Автопром",
-            style: TextStyle(fontSize: 30)
+            style: TextStyle(fontSize: 25)
         ),
     ),
           backgroundColor: const Color.fromARGB(255, 0, 255, 200),
+          actions: [IconButton(onPressed: ()
+          {Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => FavouritePage()));},
+                icon: const Icon(Icons.favorite, color: Colors.red,)
+                ),
+            IconButton(onPressed: ()
+            {Navigator.push(
+                context,
+                MaterialPageRoute(
+                builder: (context) => BasketPage()));},
+                icon: const Icon(Icons.shopping_basket_outlined, color: Colors.black,),
+    ),]
         ),
         body:
         GridView.builder(
@@ -74,6 +91,7 @@ class HomePage extends StatelessWidget {
                   );
                 }
     )
+
     );
   }
 }
