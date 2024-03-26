@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:russian_autoprom/autopage.dart';
-import 'package:russian_autoprom/basket.dart';
-import 'package:russian_autoprom/favourite.dart';
+import 'package:russian_autoprom/Basket.dart';
+import 'package:russian_autoprom/Favourite.dart';
 
 
 
