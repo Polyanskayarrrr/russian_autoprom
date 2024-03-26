@@ -154,3 +154,8 @@ List <Auto> autoList = [
       "https://youtu.be/rgZwJU9wKGM")
 ];
 List <String> characteristicName = ["Тип машины","Масса", "Тип двигателя","Рабочий объем двигателя", "Мощность двигателя (л/с)"];
+
+List <Auto> basketList = [];
+
+List <Auto> favouriteList = [];
+

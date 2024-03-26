@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:russian_autoprom/purchase.dart';
 import 'package:russian_autoprom/videowidget.dart';
 import 'main.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
@@ -185,14 +186,54 @@ class AutoPage extends StatelessWidget {
               VideoWidget(index_car: index_car),
               Column(
                 children: [
-                  ElevatedButton(onPressed: () {},
+                  ElevatedButton(onPressed: () {
+                    favouriteList.add(autoList[index_car]);
+                  },
                     child: const Text("Добавить в избранное",
+                        style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
+                            fontSize: 26)
+                    ),
+                  ),
+                  ElevatedButton(onPressed: () {
+                    basketList.add(autoList[index_car]);
+                  },
+                    child: const Text("Добавить в корзину",
                       style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
                           fontSize: 26)
                   ),
                                     ),
-                  ElevatedButton(onPressed: () {},
-                    child: const Text("Добавить в корзину",
+                  ElevatedButton(onPressed: () {
+                    showDialog(context: context,
+                        builder: (BuildContext context) {
+                      return AlertDialog(
+                          content: Text('Вы уверены в покупке?',
+                          style: TextStyle(fontSize: 20)
+                          ),
+                          actions: [
+                             ElevatedButton(onPressed: (){
+                              Navigator.of(context).pop();
+                            },
+                                child: Text('Нет',
+                            style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
+                            fontSize: 17)
+                            )
+                            ),
+                           ElevatedButton(onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => purchasePage()));
+                            },
+                                child: Text('Да',
+                                    style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
+                                        fontSize: 17)
+                                )
+                            )
+                          ]
+                      );
+                        });
+                  },
+                    child: const Text("Купить",
                         style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),
                             fontSize: 26)
                     ),
