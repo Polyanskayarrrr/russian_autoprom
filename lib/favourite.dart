@@ -67,7 +67,7 @@ class Favourite extends StatelessWidget {
 
               ),
               Center(
-                  child: Expanded(child: Text('Комплектация: ${favouriteList[index_favourite].model}'
+                  child: Expanded(child: Text('Модель: ${favouriteList[index_favourite].model}'
                   ),
                   )
               ),

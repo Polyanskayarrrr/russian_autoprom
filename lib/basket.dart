@@ -68,7 +68,7 @@ class BasketList extends StatelessWidget {
 
               ),
               Center(
-                  child: Expanded(child: Text('Комплектация: ${basketList[index_basket].model}'
+                  child: Expanded(child: Text('Модель: ${basketList[index_basket].model}'
                   ),
                   )
               ),
