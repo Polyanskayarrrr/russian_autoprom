@@ -18,23 +18,204 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Российский автопром',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(50, 80, 10, 20)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(50, 80, 10, 20)),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Center( child: Text('Добро Пожаловать!', style: TextStyle(
+          color: Colors.black54,
+          fontSize: 30,
+        ),
+        ),
+        ),
+        backgroundColor: const Color.fromARGB(255, 0, 255, 200),
+      ),
+      body: ListView(
+        children: [
+          Center(
+            child: Container(
+              margin: const EdgeInsets.only(top: 125),
+              child: Column(
+                children: [const Text("Авторизация", style: TextStyle(
+                    fontSize: 23,
+                    color: Colors.black54
+                ),
+                ),
+                  Container(
+                    constraints: const BoxConstraints(maxWidth: 300),
+                    margin: const EdgeInsets.only(top: 15),
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const TextField(decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Введите логин",
+                          fillColor: Colors.black12,
+                          filled: true,
+                          helperText: "Логин используется для входа в систему",
+                        ),
+                        ),
+                        TextFormField(decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Введите пароль",
+                          fillColor: Colors.black12,
+                          filled: true,
+                        ),
+                          obscureText: true,
+                        ),
+                        Container(
+                          child:  Row(
+                            children: [
+                              TextButton(onPressed: ()
+                              {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const SignupPage()),
+                                );
+                              },
+                                child: const Text("Зарегистрироваться",
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color.fromARGB(255, 0, 255, 200)
+                                  ),
+                                ),
+                              ),
+                              Padding(padding: const EdgeInsets.only(left: 65),
+                                child: ElevatedButton(onPressed: ()
+                                {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const ProductPage()),
+                                  );
+                                },
+                                  child: const Text( "Войти",
+                                    style: TextStyle(
+                                        color: Color.fromARGB(255, 0, 255, 200)
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 0, 255, 200),
+      ),
+      body: ListView(
+        children: [
+          Center(
+            child: Container(
+              margin: const EdgeInsets.only(top: 125),
+              child: Column(
+                children: [const Text("Регистрация", style: TextStyle(
+                    fontSize: 30,
+                    color: Color.fromARGB(255, 0, 255, 200)
+                ),
+                ),
+                  Container(
+                    constraints: const BoxConstraints(maxWidth: 300),
+                    margin: const EdgeInsets.only(top: 30),
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const TextField(decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Введите номер телефона/эл.почту",
+                          fillColor: Colors.black12,
+                          filled: true,
+                        ),
+                        ),
+                        TextFormField(decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Придумайте пароль",
+                          fillColor: Colors.black12,
+                          filled: true,
+                        ),
+                          obscureText: true,
+                        ),
+                        TextFormField(decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Подтвердите пароль",
+                          fillColor: Colors.black12,
+                          filled: true,
+                        ),
+                          obscureText: true,
+                        ),
+                        Container(
+                          child:  Center(
+                            child: ElevatedButton(onPressed: ()
+                            {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const LoginPage()),
+                              );
+                            },
+                              child: const Text( "Зарегистрироваться",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 0, 255, 200)
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+class ProductPage extends StatelessWidget {
+  const ProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
         appBar: AppBar( title: const Center(child: Text("Российский Автопром",
-            style: TextStyle(fontSize: 25)
+            style: TextStyle(fontSize: 21)
         ),
     ),
           backgroundColor: const Color.fromARGB(255, 0, 255, 200),
@@ -42,14 +223,14 @@ class HomePage extends StatelessWidget {
           {Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => FavouritePage()));},
+                builder: (context) => const FavouritePage()));},
                 icon: const Icon(Icons.favorite, color: Colors.red,)
                 ),
             IconButton(onPressed: ()
             {Navigator.push(
                 context,
                 MaterialPageRoute(
-                builder: (context) => BasketPage()));},
+                builder: (context) => const BasketPage()));},
                 icon: const Icon(Icons.shopping_basket_outlined, color: Colors.black,),
     ),]
         ),
