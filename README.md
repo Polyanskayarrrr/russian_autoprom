@@ -14,3 +14,7 @@
 <img width="360" alt="Снимок экрана 2024-03-27 в 12 21 58" src="https://github.com/lifst4ke/russian_autoprom/assets/143878792/f15766b9-33f9-4554-87e6-e3811e6de960">
 <img width="387" alt="Снимок экрана 2024-03-27 в 12 26 32" src="https://github.com/lifst4ke/russian_autoprom/assets/143878792/ee87d91a-6d79-4e8b-bd02-6b12f8c4ab02">
 <img width="378" alt="Снимок экрана 2024-03-27 в 12 22 30" src="https://github.com/lifst4ke/russian_autoprom/assets/143878792/9422b6a1-8714-41af-ad25-85c7ff891d48">
+## Дополнение Общая цена корзины + Управление количеством одного товара
+![Screenshot_20240327_205304](https://github.com/lifst4ke/russian_autoprom/assets/143878792/ab65f377-301c-47bf-aed0-1c2e015f4ac6)
+![Screenshot_20240327_205353](https://github.com/lifst4ke/russian_autoprom/assets/143878792/576e4d67-12f5-4538-ac16-e903047d7b53)
+![Screenshot_20240327_205431](https://github.com/lifst4ke/russian_autoprom/assets/143878792/7f2f794a-c279-44a2-ae08-0f1e62892f93)
