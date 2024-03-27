@@ -34,7 +34,7 @@ class AutoPage extends StatelessWidget {
       ),
     ),
               Container(
-                  child: Text("Цена: ${autoList[index_car].cost}",
+                  child: Text("Цена: ${autoList[index_car].cost}₽",
                       style: const TextStyle(fontSize: 26))
               ),
               Container(
@@ -219,6 +219,7 @@ class AutoPage extends StatelessWidget {
                             )
                             ),
                            ElevatedButton(onPressed: () {
+                             Navigator.pop(context);
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
