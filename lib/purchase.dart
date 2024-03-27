@@ -14,6 +14,9 @@ class purchasePage extends StatelessWidget {
     style: TextStyle(fontSize: 30)),
     )
     ),
+      body: const Text("Покупка успешно совершена!",
+        style: TextStyle(fontSize: 30)
+      ),
     );
   }
 }
