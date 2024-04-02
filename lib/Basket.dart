@@ -16,19 +16,39 @@ class BasketPage extends StatelessWidget {
             )
         ),
              body:
-              ListView.builder(
-              itemCount: basketList.length,
-              itemBuilder: (context, int index){
-              return BasketList(index_basket: index);
-          }
-      )
+                 Column(
+                  children: <Widget>[
+                  Container(
+                    height: 500,
+                    width: 500,
+                    child: ListView.builder(
+                    itemCount: basketList.length,
+                    itemBuilder: (context, int index){
+                    return BasketList(index_basket: index);
+                              }
+                          ),
+                  ),
+                      Text('Сумма товаров: ' + FinalCost().toString()+'₽'),
+                  ],
+                 )
+
 
     );
   }
 }
-class BasketList extends StatelessWidget {
-  const BasketList({Key? key, required this.index_basket}) : super(key: key);
+
+class BasketList extends StatefulWidget {
+  int index_basket;
+   BasketList({super.key, required this.index_basket});
+
+  @override
+  State<BasketList> createState() => _BasketListState(index_basket);
+}
+
+class _BasketListState extends State<BasketList> {
   final int index_basket;
+  _BasketListState(this.index_basket);
+  bool _isDisabled=false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -73,14 +93,55 @@ class BasketList extends StatelessWidget {
                   )
               ),
               Center(
-                child: Expanded(child: Text('Цена: ${basketList[index_basket].cost}')),
+                child: Expanded(child: Text('Цена: ${basketList[index_basket].cost}₽')),
               ),
+              Container(
+                child: Expanded(
+                    flex: 1,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: ElevatedButton(
+                              onPressed: _isDisabled ? null : (){
+                                if(basketList[index_basket].quantity <= 1){
+                                }
+                                else if (basketList[index_basket].quantity == 2){
+                                  _isDisabled = true;
+                                  setState(() {
+                                    basketList[index_basket].quantity--;
+                                  });
+                                }
+                                else{
+                                  setState(() {
+                                    basketList[index_basket].quantity--;
+                                  });
+                                }
+                              },
+                              child: Text('-')
+                          ),
+                        ),
+                        Expanded(child: Text(basketList[index_basket].quantity.toString(), textAlign: TextAlign.center,)),          Expanded(
+                            flex: 1,
+                            child: ElevatedButton(
+                                onPressed: (){
+                                  setState(() {
+                                    basketList[index_basket].quantity++;
+                                    _isDisabled = false;
+                                  });
+                                },
+                                child: Text('+'))
+                        )
+                      ],      )
+
+                ),)
             ]
         )
 
     );
   }
 }
+
 
 
 
