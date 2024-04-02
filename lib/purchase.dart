@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:russian_autoprom/main.dart';
 
 class purchasePage extends StatelessWidget {
   const purchasePage({super.key});
@@ -10,11 +9,11 @@ class purchasePage extends StatelessWidget {
         appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 0, 255, 200),
     title: const Center(
-    child: Text("Покупка",
+    child: Text("История покупок",
     style: TextStyle(fontSize: 30)),
     )
     ),
-      body: const Text("Покупка успешно совершена!",
+      body: const Text("В разработке!",
         style: TextStyle(fontSize: 30)
       ),
     );

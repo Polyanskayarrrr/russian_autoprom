@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:russian_autoprom/account.dart';
 import 'package:russian_autoprom/autopage.dart';
 import 'package:russian_autoprom/Basket.dart';
 import 'package:russian_autoprom/Favourite.dart';
@@ -215,7 +216,7 @@ class ProductPage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar( title: const Center(child: Text("Российский Автопром",
-            style: TextStyle(fontSize: 21)
+            style: TextStyle(fontSize: 15)
         ),
     ),
           backgroundColor: const Color.fromARGB(255, 0, 255, 200),
@@ -232,6 +233,13 @@ class ProductPage extends StatelessWidget {
                 MaterialPageRoute(
                 builder: (context) => const BasketPage()));},
                 icon: const Icon(Icons.shopping_basket_outlined, color: Colors.black,),
+    ),
+            IconButton(onPressed: ()
+      {Navigator.push(
+      context,
+      MaterialPageRoute(
+      builder: (context) => const acc()));},
+      icon: const Icon(Icons.person, color: Colors.black,),
     ),]
         ),
         body:

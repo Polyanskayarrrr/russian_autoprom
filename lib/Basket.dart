@@ -121,7 +121,8 @@ class _BasketListState extends State<BasketList> {
                               child: Text('-')
                           ),
                         ),
-                        Expanded(child: Text(basketList[index_basket].quantity.toString(), textAlign: TextAlign.center,)),          Expanded(
+                        Expanded(child: Text(basketList[index_basket].quantity.toString(), textAlign: TextAlign.center,)),
+                        Expanded(
                             flex: 1,
                             child: ElevatedButton(
                                 onPressed: (){
