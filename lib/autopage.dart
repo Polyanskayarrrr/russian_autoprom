@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:russian_autoprom/purchase.dart';
 import 'package:russian_autoprom/videowidget.dart';
 import 'main.dart';
 import 'package:flutter_swiper_view/flutter_swiper_view.dart';
@@ -220,10 +219,7 @@ class AutoPage extends StatelessWidget {
                             ),
                            ElevatedButton(onPressed: () {
                              Navigator.pop(context);
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => purchasePage()));
+                             historyList.add(autoList[index_car]);
                             },
                                 child: Text('Да',
                                     style: TextStyle(color: Color.fromARGB(255, 0, 255, 200),

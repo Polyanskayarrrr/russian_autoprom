@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:russian_autoprom/purchase.dart';
+import 'package:russian_autoprom/historypurchases.dart';
 import 'main.dart';
 
 class acc extends StatelessWidget {

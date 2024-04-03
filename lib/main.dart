@@ -349,6 +349,8 @@ List <Auto> basketList = [];
 
 List <Auto> favouriteList = [];
 
+List <Auto> historyList=[];
+
 double FinalCost(){
   double Sum = 0 ;
   int count = 0;
