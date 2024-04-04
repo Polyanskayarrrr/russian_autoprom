@@ -19,3 +19,9 @@
 ![Screenshot_20240327_205304](https://github.com/lifst4ke/russian_autoprom/assets/143878792/ab65f377-301c-47bf-aed0-1c2e015f4ac6)
 ![Screenshot_20240327_205353](https://github.com/lifst4ke/russian_autoprom/assets/143878792/576e4d67-12f5-4538-ac16-e903047d7b53)
 ![Screenshot_20240327_205431](https://github.com/lifst4ke/russian_autoprom/assets/143878792/7f2f794a-c279-44a2-ae08-0f1e62892f93)
+
+## Дополнение личный кабинет + история покупок + покупка всего из корзины
+![image](https://github.com/lifst4ke/russian_autoprom/assets/143878792/e41a0d5b-a2f8-4d55-b13a-1ae6cfa0122c)
+![image](https://github.com/lifst4ke/russian_autoprom/assets/143878792/003e0810-ba5b-4c1b-ac45-b01d70f81d26)
+![image](https://github.com/lifst4ke/russian_autoprom/assets/143878792/339766fe-df2b-4d3b-b04a-48102a1c128f)
+![image](https://github.com/lifst4ke/russian_autoprom/assets/143878792/ac59e755-8c50-43bd-9cd6-1419ef450c7a)
